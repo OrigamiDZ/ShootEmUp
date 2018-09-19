@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShootEmUp-ProjetIntro", "ShootEmUp-ProjetIntro.csproj", "{1375BE85-5F40-DC77-66FC-DCEF48D98D2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1375BE85-5F40-DC77-66FC-DCEF48D98D2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1375BE85-5F40-DC77-66FC-DCEF48D98D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1375BE85-5F40-DC77-66FC-DCEF48D98D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1375BE85-5F40-DC77-66FC-DCEF48D98D2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
