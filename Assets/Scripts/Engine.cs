@@ -10,8 +10,7 @@ public class Boundary
 
 public class Engine : MonoBehaviour {
 
-    private PlayerAvatar avatar;
-    private InputManager input;
+    private BaseAvatar avatar;
     private Vector2 position;
 
     [SerializeField]
@@ -19,8 +18,7 @@ public class Engine : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        avatar = GetComponent<PlayerAvatar>();
-        input = GetComponent<InputManager>();
+        avatar = GetComponent<BaseAvatar>();
     }
 
     public void Move(Vector2 speed) 

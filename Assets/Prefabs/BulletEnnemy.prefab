@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4006836852343134}
   - component: {fileID: 212432278691060868}
   - component: {fileID: 60037680078831160}
-  - component: {fileID: 114729936909021230}
   - component: {fileID: 50573623320234892}
+  - component: {fileID: 114729936909021230}
   m_Layer: 0
   m_Name: BulletEnnemy
   m_TagString: Untagged

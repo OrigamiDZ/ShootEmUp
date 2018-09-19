@@ -21,5 +21,9 @@ public class AIBasicEngine : MonoBehaviour {
         Instantiate(gun.getShot(), gun.getShotspawn().position, gun.getShotspawn().rotation);
     }
 
+    void Update()
+    {
+        moteur.Move(Vector2.left);
+    }
 
 }
