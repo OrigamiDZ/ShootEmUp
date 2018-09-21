@@ -30,7 +30,7 @@ public class InputManager : MonoBehaviour {
         speed = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         moteur.Move(speed);
 
-        if (Input.GetKey("tab"))
+        if (Input.GetKeyDown("tab"))
         {
             currentGun++;
             if (currentGun >= gun.getNbGun())

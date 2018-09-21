@@ -106,6 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.03
   damage: 1
+  energy: 1
   cible: {fileID: 1071161080101556, guid: 5176126f9f536454b9fbf1c4c4969d19, type: 2}
 --- !u!212 &212182729102415894
 SpriteRenderer:
