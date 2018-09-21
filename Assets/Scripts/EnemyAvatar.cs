@@ -28,7 +28,7 @@ public class EnemyAvatar : BaseAvatar {
 
     public void Die()
     {
-        Destroy(gameObject);
+        Destroy(gameObject, 0.2f);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -9,11 +9,18 @@ public abstract class Bullet : MonoBehaviour {
     [SerializeField]
     protected int damage;
     [SerializeField]
+    protected int energy;
+    [SerializeField]
     protected GameObject cible;
 
     public int getDamage()
     {
         return damage;
+    }
+
+    public int getEnergy()
+    {
+        return energy;
     }
 
 

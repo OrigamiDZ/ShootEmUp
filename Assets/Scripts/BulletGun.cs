@@ -26,8 +26,12 @@ public class BulletGun : MonoBehaviour {
     private int nbGun;
 
     private float nextFire;
+    private PlayerAvatar avatar;
 
-
+    private void Start()
+    {
+        avatar = GetComponent<PlayerAvatar>();
+    }
 
     public GameObject getShot()
     {
@@ -54,6 +58,12 @@ public class BulletGun : MonoBehaviour {
     {
         nextFire = Time.time + fireRate;
         Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+        Bullet bull = shot.GetComponent<Bullet>();
+        if (avatar != null)
+        {
+            avatar.setEnergy(avatar.getEnergy() - bull.getEnergy());
+        }
+
     }
 
     public void ShotMultiple()
@@ -69,6 +79,25 @@ public class BulletGun : MonoBehaviour {
         Instantiate(shot23m, shotSpawn.position, shotSpawn.rotation);
         Instantiate(shot45m, shotSpawn.position, shotSpawn.rotation);
         Instantiate(shot68m, shotSpawn.position, shotSpawn.rotation);
+
+        Bullet bull = shot.GetComponent<Bullet>();
+        Bullet bull2 = shot23.GetComponent<Bullet>();
+        Bullet bull3 = shot23m.GetComponent<Bullet>();
+        Bullet bull4 = shot45.GetComponent<Bullet>();
+        Bullet bull5 = shot45m.GetComponent<Bullet>();
+        Bullet bull6 = shot68.GetComponent<Bullet>();
+        Bullet bull7 = shot68m.GetComponent<Bullet>();
+        if (avatar != null)
+        {
+            avatar.setEnergy(avatar.getEnergy() - 
+                bull.getEnergy() - 
+                bull2.getEnergy() - 
+                bull3.getEnergy() - 
+                bull4.getEnergy() - 
+                bull5.getEnergy() -
+                bull6.getEnergy() -
+                bull7.getEnergy());
+        }
 
     }
 }

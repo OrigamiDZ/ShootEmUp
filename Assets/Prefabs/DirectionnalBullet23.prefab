@@ -106,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.03
   damage: 5
-  cible: {fileID: 1196800897332888, guid: 5176126f9f536454b9fbf1c4c4969d19, type: 2}
+  cible: {fileID: 1071161080101556, guid: 5176126f9f536454b9fbf1c4c4969d19, type: 2}
   angle: {x: 2, y: 1, z: 0}
 --- !u!212 &212415481018866112
 SpriteRenderer:

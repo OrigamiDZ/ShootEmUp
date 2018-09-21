@@ -8,7 +8,7 @@ public abstract class BaseAvatar : MonoBehaviour {
     protected int health;
 
     [SerializeField]
-    protected int energy;
+    protected int maxEnergy;
 
     [SerializeField]
     protected float maxSpeed;
@@ -19,6 +19,16 @@ public abstract class BaseAvatar : MonoBehaviour {
     [SerializeField]
     protected int damage;
 
+    protected int energy;
+
+    public int getEnergy()
+    {
+        return energy;
+    }
+    public void setEnergy(int newEnergy)
+    {
+        energy = newEnergy;
+    }
     public float getMaxSpeed()
     {
         return maxSpeed;
