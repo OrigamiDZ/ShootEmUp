@@ -4,21 +4,55 @@ using UnityEngine;
 
 public class PlayerAvatar : BaseAvatar {
 
+    private GameObject gameController;
+    private GameManager game;
+    private Animator anima;
 
-    public override void decreaseHealth()
+    private void Start()
     {
-        health = health - 1;
+        gameController = GameObject.FindGameObjectWithTag("GameController");
+        game = gameController.GetComponent<GameManager>();
+        anima = GetComponent<Animator>();
     }
 
-
-    // Use this for initialization
-    void Start () {
-        
-    
+    public override void decreaseHealth(int damage)
+    {
+        health = health - damage;
+        anima.SetTrigger("hurt");
+        if (health <= 0)
+        {
+            Die();
+            game.GameOver();
+        }
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Boundary" || other.tag == "Player")
+        {
+            return;
+        }
+
+        GameObject autre = other.gameObject;
+
+        int damage = 0;
+
+        if (autre.GetComponent<BaseAvatar>() != null)
+        {
+            damage = (autre.GetComponent<BaseAvatar>()).getDamage();
+        }
+        else if (autre.GetComponent<Bullet>() != null)
+        {
+            damage = (autre.GetComponent<Bullet>()).getDamage();
+        }
+
+        decreaseHealth(damage);
+
+    }
+
 }

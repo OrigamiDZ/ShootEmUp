@@ -3,19 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SimpleBullet : Bullet {
-
-    private void Start()
-    {
-    }
-
     public override void Update()
     {
         UpdatePosition();
     }
 
-    public override void OnTriggerEnter2D(Collider2D collision)
+    public override void OnTriggerEnter2D(Collider2D other)
     {
-
+        if (other.tag == cible.tag)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void UpdatePosition()

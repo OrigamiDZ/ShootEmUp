@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 19f031678b895684b82fbbf48076b6cb
+timeCreated: 1537447424
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: dinosaur
+  fontNames:
+  - dinosaur
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

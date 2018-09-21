@@ -13,12 +13,28 @@ public abstract class BaseAvatar : MonoBehaviour {
     [SerializeField]
     protected float maxSpeed;
 
+    [SerializeField]
+    protected int scoreValue;
+
+    [SerializeField]
+    protected int damage;
+
     public float getMaxSpeed()
     {
         return maxSpeed;
     }
 
-    public abstract void decreaseHealth();
+    public int getDamage()
+    {
+        return damage;
+    }
+
+    public int getScoreValue()
+    {
+        return scoreValue;
+    }
+
+    public abstract void decreaseHealth(int damage);
 
 
 }

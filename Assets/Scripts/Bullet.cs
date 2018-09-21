@@ -8,6 +8,14 @@ public abstract class Bullet : MonoBehaviour {
     protected float speed;
     [SerializeField]
     protected int damage;
+    [SerializeField]
+    protected GameObject cible;
+
+    public int getDamage()
+    {
+        return damage;
+    }
+
 
     public abstract void Update();
 
